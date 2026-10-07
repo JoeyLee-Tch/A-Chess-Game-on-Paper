@@ -1,0 +1,77 @@
+@use '@/styles/variables.scss' as *;
+
+.board {
+  position: relative;
+  margin: 0 auto;
+  background: $color-board-bg;
+  border-radius: $radius-md;
+  background-image: radial-gradient(rgba(90, 70, 50, 0.05) 1rpx, transparent 1rpx);
+  background-size: 24rpx 24rpx;
+}
+
+.line {
+  position: absolute;
+  background: $color-board-line;
+  border-radius: 4rpx;
+  transform-origin: 0 50%;
+  opacity: 0.85;
+}
+
+.hotspot {
+  position: absolute;
+  width: 108rpx;
+  height: 108rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.pieceSlot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.targetDot {
+  position: absolute;
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: $radius-round;
+  background: rgba(181, 81, 42, 0.3);
+  border: 3rpx dashed rgba(181, 81, 42, 0.7);
+}
+
+.captureRing {
+  position: absolute;
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: $radius-round;
+  border: 5rpx dashed $color-error;
+  animation: pulse 0.9s ease-in-out infinite;
+}
+
+.hotspotCapturable {
+  z-index: 3;
+}
+
+.selectedRing {
+  position: absolute;
+  width: 104rpx;
+  height: 104rpx;
+  border-radius: $radius-round;
+  border: 5rpx solid rgba(181, 81, 42, 0.55);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.55;
+  }
+}

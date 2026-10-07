@@ -1,0 +1,29 @@
+@use '@/styles/variables.scss' as *;
+
+.piece {
+  border-radius: $radius-round;
+  border: 4rpx solid rgba(58, 44, 34, 0.55);
+  box-shadow: 0 4rpx 10rpx rgba(58, 44, 34, 0.35),
+    inset 0 -4rpx 8rpx rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform $transition-fast, box-shadow $transition-fast;
+}
+
+.selected {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 8rpx rgba(181, 81, 42, 0.25),
+    0 6rpx 14rpx rgba(58, 44, 34, 0.4);
+}
+
+.dimmed {
+  opacity: 0.25;
+}
+
+.label {
+  color: #fdf7ea;
+  font-size: 30rpx;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+}

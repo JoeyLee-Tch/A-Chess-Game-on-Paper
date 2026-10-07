@@ -1,0 +1,238 @@
+@use '@/styles/variables.scss' as *;
+
+.shell {
+  min-height: 100vh;
+  padding: 24rpx 32rpx 48rpx;
+  box-sizing: border-box;
+}
+
+.headerCard {
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+  border-radius: $radius-lg;
+  padding: 24rpx 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: $shadow-card;
+}
+
+.modeSwitch {
+  margin-top: 20rpx;
+  padding: 6rpx;
+  display: flex;
+  gap: 6rpx;
+  background: $color-bg-hover;
+  border-radius: $radius-button;
+}
+
+.modeItem {
+  flex: 1;
+  height: 64rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-button;
+  transition: all $transition-fast;
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.modeItemActive {
+  background: $color-bg-card;
+  box-shadow: $shadow-card;
+}
+
+.modeItemText {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  font-weight: $font-weight-medium;
+}
+
+.modeItemTextActive {
+  color: $color-primary-dark;
+  font-weight: $font-weight-semibold;
+}
+
+.playerBadge {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  padding: 12rpx 20rpx;
+  border-radius: $radius-md;
+  border: 3rpx solid transparent;
+  transition: all $transition-base;
+  flex: 1;
+  justify-content: center;
+}
+
+.dot {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: $radius-round;
+  border: 2rpx solid rgba(58, 44, 34, 0.4);
+}
+
+.playerName {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.vs {
+  width: 64rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vsText {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  font-weight: $font-weight-bold;
+  letter-spacing: 2rpx;
+}
+
+.statusBar {
+  margin: 24rpx 0;
+  padding: 20rpx 32rpx;
+  background: rgba(181, 81, 42, 0.08);
+  border: 2rpx dashed rgba(181, 81, 42, 0.35);
+  border-radius: $radius-md;
+}
+
+.statusText {
+  font-size: $font-size-md;
+  color: $color-primary-dark;
+  font-weight: $font-weight-medium;
+  text-align: center;
+  display: block;
+}
+
+.boardWrap {
+  background: $color-board-bg;
+  border: 2rpx solid $color-border;
+  border-radius: $radius-lg;
+  padding: 32rpx 24rpx;
+  box-shadow: $shadow-card;
+  overflow: hidden;
+}
+
+.resultOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(58, 44, 34, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+.resultCard {
+  width: 520rpx;
+  background: $color-bg-card;
+  border-radius: $radius-xl;
+  border: 3rpx solid $color-border;
+  padding: 48rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: $shadow-popup;
+}
+
+.resultEmoji {
+  font-size: 72rpx;
+  margin-bottom: 16rpx;
+}
+
+.resultText {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  margin-bottom: 32rpx;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.resultBtn {
+  @include button-reset;
+  width: 100%;
+  height: $button-height-md;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+  border-radius: $radius-button;
+  transition: opacity $transition-fast;
+
+  &:active {
+    opacity: 0.88;
+    transform: scale(0.98);
+  }
+}
+
+.resultBtnText {
+  color: $color-text-white;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+}
+
+.footer {
+  display: flex;
+  gap: 24rpx;
+  margin-top: 32rpx;
+}
+
+.footerBtn {
+  @include button-reset;
+  flex: 1;
+  height: $button-height-md;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+  border-radius: $radius-button;
+  transition: opacity $transition-fast;
+
+  &:active {
+    opacity: 0.88;
+    transform: scale(0.98);
+  }
+}
+
+.footerBtnText {
+  color: $color-text-white;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+}
+
+.footerBtnGhost {
+  @include button-reset;
+  flex: 1;
+  height: $button-height-md;
+  background: transparent;
+  border: 2rpx solid $color-border;
+  border-radius: $radius-button;
+  transition: all $transition-fast;
+
+  &:active {
+    background: $color-bg-hover;
+  }
+}
+
+.footerBtnGhostText {
+  color: $color-text-secondary;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+}
+
+.footerNote {
+  margin-top: 32rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.footerNoteText {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  letter-spacing: 2rpx;
+}

@@ -1,0 +1,38 @@
+// ============================================
+// 主题配色变量（复古纸张手绘风格）
+// ============================================
+
+// 品牌主题色：赭红（红砖/印章色）
+$color-primary: #b5512a;
+$color-primary-light: #cf6b3f;
+$color-primary-dark: #8f3d1e;
+
+// 功能色
+$color-success: #4a8c4a;
+$color-warning: #d98e2b;
+$color-error: #c0392b;
+$color-info: #2e5eaa;
+
+// 背景色（泛黄纸张）
+$color-bg-page: #f3ead7;
+$color-bg-card: #fdf7ea;
+$color-bg-hover: #eee2c8;
+
+// 文本色（墨棕）
+$color-text-primary: #3a2c22;
+$color-text-secondary: #6b5744;
+$color-text-tertiary: #9a8570;
+$color-text-disabled: #c9c0ae;
+$color-text-white: #ffffff;
+
+// 边框色
+$color-border: #dcc9a5;
+$color-divider: #eadfc6;
+
+// 对局棋子色
+$color-player1: #c0392b; // 红方
+$color-player2: #2e5eaa; // 蓝方
+$color-chick: #d9a036; // 小鸡
+$color-hen: #c0392b; // 母鸡
+$color-board-line: #5a4632; // 棋盘线条（铅笔棕）
+$color-board-bg: #f8f1de; // 棋盘纸面

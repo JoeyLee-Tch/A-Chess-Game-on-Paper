@@ -1,0 +1,79 @@
+@use '@/styles/variables.scss' as *;
+
+$grid-size: 600rpx;
+$cell: 200rpx;
+
+.grid {
+  position: relative;
+  width: $grid-size;
+  height: $grid-size;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gridLine {
+  position: absolute;
+  background: $color-board-line;
+  border-radius: 4rpx;
+  opacity: 0.85;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.gridLineV1 {
+  left: calc(#{$cell} - 2rpx);
+  top: 8rpx;
+  width: 5rpx;
+  height: calc(#{$grid-size} - 16rpx);
+}
+
+.gridLineV2 {
+  left: calc(#{$cell} * 2 - 2rpx);
+  top: 8rpx;
+  width: 5rpx;
+  height: calc(#{$grid-size} - 16rpx);
+}
+
+.gridLineH1 {
+  top: calc(#{$cell} - 2rpx);
+  left: 8rpx;
+  height: 5rpx;
+  width: calc(#{$grid-size} - 16rpx);
+}
+
+.gridLineH2 {
+  top: calc(#{$cell} * 2 - 2rpx);
+  left: 8rpx;
+  height: 5rpx;
+  width: calc(#{$grid-size} - 16rpx);
+}
+
+.cell {
+  width: $cell;
+  height: $cell;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.cellWin {
+  background: rgba(74, 140, 74, 0.15);
+  border-radius: $radius-sm;
+}
+
+.mark {
+  font-size: 110rpx;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+}
+
+.markO {
+  color: #c0392b;
+}
+
+.markX {
+  color: #2e5eaa;
+}
